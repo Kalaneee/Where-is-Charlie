@@ -21,8 +21,9 @@ public final class Main {
 	 */
 	
     public static void main(String[] args) {
+    	//Yolo ceci est un test. !!
     	testGetRed();
-    	testGetGreen();
+    	testGetGreen(); 
     	testGetBlue();
     	testGetThreeColors();
     	testGetGray();
