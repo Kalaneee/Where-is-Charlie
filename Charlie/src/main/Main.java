@@ -22,6 +22,7 @@ public final class Main {
 	
     public static void main(String[] args) {
     	//Yolo ceci est un test. !!
+    	// Ceci est un 2eme test
     	testGetRed();
     	testGetGreen(); 
     	testGetBlue();
