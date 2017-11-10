@@ -12,7 +12,7 @@ public final class ImageProcessing {
     public static int getRed(int rgb) {
     	// on decale de 16 bits vers la droite pour obtenir uniquement les
     	// 8 bits correspondant au rouge.
-    	// 0xff permet d'obtenir un hexadecimal.
+    	// 0xff permet de selectionner seulement 8 bits
     	rgb = (rgb >> 16) & 0xff;
     	rgb = testValMax(rgb);
     	return rgb; 
