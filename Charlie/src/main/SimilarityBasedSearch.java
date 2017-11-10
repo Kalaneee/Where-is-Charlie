@@ -25,7 +25,7 @@ public class SimilarityBasedSearch {
 	 * @param row : an integer, la ligne de l image ou se situe le coin haut gauche du pattern
 	 * @param col : an integer, la colonne de l image ou se situe le coin haut gauche du pattern
 	 * @param width : an integer, la largeur du pattern
-	 * @param height : an interger, la largeur du pattern
+	 * @param height : an integer, la largeur du pattern
 	 * @return a double, la moyenne des couleurs des pixels du pattern
 	 */
 	static double windowMean(double[][] matrix, int row, int col, int width, int height) {
