@@ -21,9 +21,6 @@ public final class Main {
 	 */
 	
     public static void main(String[] args) {
-    	//Yolo ceci est un test. !!
-    	// Ceci est un 2eme test
-    	//Ceci est un 3ème test de git !
     	testGetRed();
     	testGetGreen(); 
     	testGetBlue();
