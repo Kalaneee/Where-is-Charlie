@@ -74,7 +74,7 @@ public class SimilarityBasedSearch {
 			}
 		}
 		double denom = Math.sqrt(nccDenom1 * nccDenom2);
-		//si le denominateur est egal à 0, on retourne -1, sinon le ncc
+		//si le denominateur est egal a 0, on retourne -1, sinon le ncc
 		if (denom == 0)
 			return -1;
 
@@ -92,9 +92,9 @@ public class SimilarityBasedSearch {
 	public static double[][] similarityMatrix(double[][] pattern, double[][] image) {
 		assert pattern.length > 0 && pattern.length > 0;
 		assert image.length > 0 && image[0].length > 0;
-		//On cree le tab du return de dimensions egalent au nombre de fois que l'on peut 
-		//mettre le pattern dans l'image, ex : image de longueur 6, pattern de longueur 3, on peut
-		//placer 4x le pattern sans déborder de l'image
+		// On cree le tab du return de dimensions egalent au nombre de fois que l'on peut 
+		// mettre le pattern dans l'image, ex : image de longueur 6, pattern de longueur 3, on peut
+		// placer 4x le pattern sans deborder de l'image
 		double[][] tab = new double[image.length - pattern.length + 1][image[0].length - pattern[0].length + 1];
 		for (int i = 0; i < tab.length; i++) {
 			for (int j = 0; j < tab[0].length; j++) {

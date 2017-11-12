@@ -27,7 +27,6 @@ public final class ImageProcessing {
      * @see #getRGB(int, int, int)
      */
     public static int getGreen(int rgb) {
-
     	rgb = (rgb >> 8) & 0xff;
     	rgb = testValMax(rgb);
     	return rgb; 
@@ -72,7 +71,6 @@ public final class ImageProcessing {
      */
     public static double getGray(int rgb) {
     	double moyenne = (getRed(rgb) + getGreen(rgb) + getBlue(rgb))/3.0;
-    	//moyenne = testValMax(moyenne);
     	return (moyenne);
     }
 

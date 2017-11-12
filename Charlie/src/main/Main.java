@@ -33,7 +33,7 @@ public final class Main {
     	testMatrixToRGBImage();
     	testFindBest();
     	//testGrayscale();
-    	testFindNBest();
+    	//testFindNBest();
     	testPixelAbsoluteError();
     	testMeanAbsoluteError();
     	testDistanceMatrix();
@@ -177,7 +177,7 @@ public final class Main {
     }
     
     public static void testMatrixToRGBImage() {
-    	//valeurs de ref calculees avec la forme de la donnee et la methode getRGB
+    	// valeurs de ref calculees avec la forme de la donnee et la methode getRGB
     	int[][] ref = {{4408131, 0},{9211020, 16777215}};
     	double[][] image = {{150.0, 12.0},{300.0, 537.0}};
     	int [][]test = ImageProcessing.matrixToRGBImage(image, 12.0, 537.0);
@@ -224,8 +224,6 @@ public final class Main {
     		System.out.println("Row=" + r + " Col=" + c + " Val=" + t[r][c]);
     	}    
     }
-    
-    //TODO: complete
 
     /*
      * Tests for Class DistanceBasedSearch
@@ -384,20 +382,13 @@ public final class Main {
     	int[][] charlie = Helper.read("images/tete.png");
     	double[][] beachGray = ImageProcessing.toGray(beach);
     	double[][] charlieGray = ImageProcessing.toGray(charlie); 
-    	System.out.println("Etape 1");
-
     	System.out.println("Compute Similarity Matrix: expected time about 2 min");
     	double[][] similarity = SimilarityBasedSearch.similarityMatrix(charlieGray, beachGray);
-
     	System.out.println("Find N Best");
     	int[] best = Collector.findBest(similarity, false); 
-    	System.out.println("Etape 3");
     	double max = similarity[best[0]][best[1]];
-    	System.out.println("Etape 4");
     	Helper.show(ImageProcessing.matrixToRGBImage(similarity, -1, max), "Similarity");
-    	System.out.println("Etape 5");
     	Helper.drawBox(best[0], best[1], charlie[0].length, charlie.length, beach);
-    	System.out.println("Etape 6");
     	System.out.println("drawBox at (" + best[0] + "," + best[1] + ")");
     	Helper.show(beach, "Found again!");    	
     }
