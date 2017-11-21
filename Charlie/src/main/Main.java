@@ -379,7 +379,7 @@ public final class Main {
     public static void findCharlie() {
     	System.out.println("Find Charlie");
 		int[][] beach = Helper.read("images/charlie_beach.png");
-    	int[][] charlie = Helper.read("images/tete.png");
+    	int[][] charlie = Helper.read("images/charlie.png");
     	double[][] beachGray = ImageProcessing.toGray(beach);
     	double[][] charlieGray = ImageProcessing.toGray(charlie); 
     	System.out.println("Compute Similarity Matrix: expected time about 2 min");
